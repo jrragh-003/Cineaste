@@ -2,7 +2,7 @@
 
 This a MERN Application for providing movie reviews.
 
-To run client :
+To run frontend application :
 ```
 cd frontend
 npm i
