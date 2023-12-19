@@ -24,6 +24,8 @@ const Display = () => {
             const data = response.data;
 
             setReview(data.reviews);
+
+
             // console.log(data.reviews)
 
             setLoading(false);
@@ -40,6 +42,8 @@ const Display = () => {
             console.log(response.status)
             if (response.status === 202) {
                 console.log("Deleting")
+
+
                 // Review deleted successfully, you might want to refresh the reviews
                 setReview(prevReviews => prevReviews.filter(review => review._id !== _id));
 
@@ -76,33 +80,37 @@ const Display = () => {
     return (
         <div>
             {review && review.length > 0 ? (
-
-                <div class="flex flex-wrap mt-4 ml-6 gap-4">
+                <div className="flex flex-wrap mt-4 ml-6 gap-4">
                     {review.map((r) => (
-                        <div key={r._id} class="w-72 bg-white rounded border-t-8 border-gray-400 px-4 py-5 shadow-md">
-                            <div class="text-lg font-bold capitalize rounded-md mb-4">
-                                {r.title} - {user.name}
+                        <div key={r._id} className="w-72 bg-white rounded border-t-8 border-gray-400 px-4 py-5 shadow-md">
+                            <div className="text-lg font-bold capitalize rounded-md mb-4">
+                                {r.title} - {r.name}
                             </div>
-                            <div class="rounded-md mb-5">
+                            <div className="rounded-md mb-5">
                                 {r.review}
                             </div>
                             <div className="button-container flex justify-evenly mt-2">
                                 <button className="text-lg lg:text-sm font-bold py-2 px-4 rounded bg-gray-200 text-gray-700 mt-6 hover:bg-gray-500 hover:text-white">
                                     <FaHeart />
                                 </button>
-                                <button className="text-lg lg:text-sm font-bold py-2 px-4 rounded bg-gray-200 text-gray-700 mt-6 hover:bg-gray-500 hover:text-white" onClick={() => deleteReviews(r._id)}>
-                                    <FaRegTrashCan />
-                                </button>
-                                <NavLink to={`/reviews/${title}/edit/${r._id}`}>
-                                    <button className="text-lg lg:text-sm font-bold py-2 px-4 rounded bg-gray-200 text-gray-700 mt-6 hover:bg-gray-500 hover:text-white">
-                                        <FaPencil />
-                                    </button>
-                                </NavLink>
+
+                                {user.name === r.name ? (
+                                    <>
+                                        <button className="text-lg lg:text-sm font-bold py-2 px-4 rounded bg-gray-200 text-gray-700 mt-6 hover:bg-gray-500 hover:text-white" onClick={() => deleteReviews(r._id)}>
+                                            <FaRegTrashCan />
+                                        </button>
+
+                                        <NavLink to={`/reviews/${title}/edit/${r._id}`}>
+                                            <button className="text-lg lg:text-sm font-bold py-2 px-4 rounded bg-gray-200 text-gray-700 mt-6 hover:bg-gray-500 hover:text-white">
+                                                <FaPencil />
+                                            </button>
+                                        </NavLink>
+                                    </>
+                                ) : null}
                             </div>
                         </div>
                     ))}
                 </div>
-
             ) : (
                 <div className="text-center">No data available</div>
             )}
