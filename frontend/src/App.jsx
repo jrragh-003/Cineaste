@@ -3,7 +3,7 @@ import Movies from './pages/Movies';
 import Home from './pages/Home'
 import Navbar from './components/Navbar';
 import ReviewForm from './pages/ReviewForm';
-import { Review } from './pages/review';
+import Review from './pages/Review';
 import UpdateReview from './pages/ReviewUpdateForm';
 import { Routes, Route, Link } from 'react-router-dom';
 import Register from './pages/Register';
