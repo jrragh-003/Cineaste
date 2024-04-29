@@ -2,9 +2,11 @@ import React from "react";
 import Details from "../components/Details";
 
 
-export const Review = () => {
+const Review = () => {
     return <Details />;
 
 }
+
+export default Review
 
 
