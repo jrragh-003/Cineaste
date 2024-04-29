@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require("express");
+const auth = require("../middleware/auth");
 const router = express.Router();
-const paymentController = require('../controller/paymentController')
+const paymentController = require("../controller/paymentController");
 
-router.post('/razorpay',paymentController.makePayment)
+router.post("/razorpay", auth.protect, paymentController.makePayment);
 
-module.exports = router
+module.exports = router;
