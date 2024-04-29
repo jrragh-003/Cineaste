@@ -2,14 +2,16 @@
 
 This a MERN Application for providing movie reviews.
 
-To run frontend application :
+To run the application :
 ```
-cd frontend
-npm i
-npm run dev
+docker-compose up
 ```
-To run server:
+
+This will spin up the frontend backend and mongodb containers
+
+To stop the application :
+
 ```
-cd backend
-nodemon server.js
+docker-compose down
 ```
+
