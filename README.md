@@ -15,7 +15,7 @@ To stop the application :
 docker-compose down
 ```
 
-
+High Level Design :
 
 ![image](https://github.com/user-attachments/assets/56ebbb59-c4b1-4e4e-9d05-ccb930fe0937)
 
