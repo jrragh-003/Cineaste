@@ -15,6 +15,9 @@ To stop the application :
 docker-compose down
 ```
 
-![image](https://github.com/user-attachments/assets/ff585bb7-e1ce-447b-8cbe-b370466b99a7)
+
+
+![image](https://github.com/user-attachments/assets/56ebbb59-c4b1-4e4e-9d05-ccb930fe0937)
+
 
 
