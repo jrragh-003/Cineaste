@@ -7,7 +7,7 @@ To run the application :
 docker-compose up
 ```
 
-This will spin up the frontend backend and mongodb containers
+This will spin up containers
 
 To stop the application :
 
