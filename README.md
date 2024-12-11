@@ -17,7 +17,4 @@ docker-compose down
 
 # High Level Design 
 
-![image](https://github.com/user-attachments/assets/448c77ea-5cdf-420e-b198-5f7e9b9a0073)
-
-# Bug : Unable to access server for registering new user 
-
+![image](HLD.excalidraw)
