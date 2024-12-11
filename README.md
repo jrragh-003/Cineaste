@@ -16,5 +16,4 @@ docker-compose down
 ```
 
 # High Level Design 
-
-![image](file:///home/ragh/Raghu/Cineaste/HLD.png)
+![HLD](https://github.com/user-attachments/assets/22e2a48a-817d-4ae9-8b3e-c1f221b85fca)
