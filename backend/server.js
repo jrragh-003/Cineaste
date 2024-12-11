@@ -11,12 +11,10 @@ app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json()); // Add this line
 
-const reviewRoutes = require("./routes/reviewRoute");
-app.use("/api", reviewRoutes);
-
 const userRoutes = require("./routes/userRoute");
 app.use("/api", userRoutes);
-
+const reviewRoutes = require("./routes/reviewRoute");
+app.use("/api", reviewRoutes);
 const paymentRoute = require("./routes/paymentRoute");
 app.use("/api", paymentRoute);
 

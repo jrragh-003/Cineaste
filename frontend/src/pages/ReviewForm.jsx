@@ -27,11 +27,11 @@ const ReviewForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        console.log(user)
         const dataToSend = {
             title: title, // Include the movie title
-            name: user.name,
-            phoneNumber: user.phoneNumber,
+            name: user.user.name,
+            phoneNumber: user.user.phoneNumber,
             review: formdata.review
         };
 
@@ -63,8 +63,8 @@ const ReviewForm = () => {
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Welcome to Cineaste</h2>
 
                     <form method="POST" className="flex flex-col" onSubmit={handleSubmit}>
-                        <input placeholder="Enter your Name" className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500 transition ease-in-out duration-150" type="text" value={user.name || ""} name="name" onChange={changeHandler} />
-                        <input placeholder="Enter Phone Number" className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500 transition ease-in-out duration-150" type="text" value={user.phoneNumber || ""} name="phoneNumber" onChange={changeHandler} />
+                        <input placeholder={user.user.name} className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500 transition ease-in-out duration-150" type="text" value={user.name || ""} name="name" onChange={changeHandler} />
+                        <input placeholder={user.user.phoneNumber} className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500 transition ease-in-out duration-150" type="text" value={user.phoneNumber || ""} name="phoneNumber" onChange={changeHandler} />
                         <textarea id="message" className="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-500 transition ease-in-out duration-150" placeholder="Write your thoughts here..." value={formdata.review} name="review" onChange={changeHandler} ></textarea>
                         <button className="bg-gray-600 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-gray-500 hover:text-white transition ease-in-out duration-150 " type="submit" >Add your Review</button>
                     </form>

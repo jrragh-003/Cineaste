@@ -7,12 +7,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://node-api:4000',
+        target: 'http://node-api:5000',
         changeOrigin: true,
-        
       },
     },
   },
+  
 });
 
 

@@ -15,18 +15,17 @@ services:
 
   backend :
     build: ./backend
-    environment: 
-      - PORT=
-      - user= 
-      - pass =
-      - key_id= 
-      - key_secret = 
-      - JWT_SECRET=
-
     container_name: node-api
+    environment: 
+      - PORT=5000
+      - user= jrragh@gmail.com
+      - pass = mfyz uqvw yopi dbdf
+      - key_id= rzp_test_w5gM0MlnOtBwFl
+      - key_secret = u71SDuXyKWqpRa0cW5nU6paN
+      - JWT_SECRET=ragh
     restart : always
     ports:
-      - 4000:4000
+      - 5000:5000
     depends_on:
       - database
     networks:
