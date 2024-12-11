@@ -1,4 +1,4 @@
-const shortid = require("shortid");
+
 const Razorpay = require("razorpay");
 const nodemailer = require("nodemailer");
 
@@ -14,7 +14,7 @@ const makePayment = async (req, res) => {
   const options = {
     amount: amount * 100,
     currency,
-    receipt: shortid.generate(),
+    receipt: Math.random().toString(36).substring(2, length+2),
     payment_capture,
   };
 

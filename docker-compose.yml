@@ -5,7 +5,7 @@ services:
     build : ./frontend
     container_name: react-ui
     ports:
-      - "5173:5173"
+      - 5173:5173
     stdin_open : true
     tty : true
     depends_on:
@@ -15,10 +15,18 @@ services:
 
   backend :
     build: ./backend
+    environment: 
+      - PORT=4000
+      - user= jrragh@gmail.com
+      - pass = mfyz uqvw yopi dbdf
+      - key_id= rzp_test_w5gM0MlnOtBwFl
+      - key_secret = u71SDuXyKWqpRa0cW5nU6paN
+      - JWT_SECRET=ragh
+
     container_name: node-api
     restart : always
     ports:
-      - "3001:3001"
+      - 4000:4000
     depends_on:
       - database
     networks:
@@ -28,7 +36,7 @@ services:
     image: mongo
     container_name: mongo-db
     ports:
-      - "27017-27017"
+      - 27017-27017
     volumes:
       - data-volume:/data/db
     networks:

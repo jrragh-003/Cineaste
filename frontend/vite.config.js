@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://node-api:3001',
+        target: 'http://node-api:4000',
         changeOrigin: true,
         
       },
