@@ -17,4 +17,4 @@ docker-compose down
 
 # High Level Design 
 
-![image](HLD.excalidraw)
+![image](HLD.PNG)
