@@ -18,11 +18,11 @@ services:
     container_name: node-api
     environment: 
       - PORT=5000
-      - user= jrragh@gmail.com
-      - pass = mfyz uqvw yopi dbdf
-      - key_id= rzp_test_w5gM0MlnOtBwFl
-      - key_secret = u71SDuXyKWqpRa0cW5nU6paN
-      - JWT_SECRET=ragh
+      - user= 
+      - pass = 
+      - key_id= 
+      - key_secret =
+      - JWT_SECRET=
     restart : always
     ports:
       - 5000:5000
